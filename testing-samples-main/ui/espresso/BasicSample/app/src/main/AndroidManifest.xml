@@ -25,12 +25,17 @@
         <activity
             android:name="com.example.android.testing.espresso.BasicSample.MainActivity"
             android:label="@string/app_name" >
+
+        </activity>
+        <activity android:name="com.example.android.testing.espresso.BasicSample.ShowTextActivity"/>
+
+        <activity android:name=".ImitateShowTextActivity"/>
+        <activity android:name=".ImitateMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.testing.espresso.BasicSample.ShowTextActivity"/>
     </application>
 
 </manifest>
