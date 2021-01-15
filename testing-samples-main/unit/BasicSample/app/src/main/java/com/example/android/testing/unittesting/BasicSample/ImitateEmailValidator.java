@@ -39,7 +39,7 @@ public class ImitateEmailValidator implements TextWatcher {
         mIsValid = isValidEmail(s);
     }
 
-    private boolean isValidEmail(CharSequence email) {
+    public static boolean isValidEmail(CharSequence email) {
         return email != null && IMITATE_EMAIL_PATTERN.matcher(email).matches();
     }
 }
