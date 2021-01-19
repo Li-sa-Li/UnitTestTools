@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.testing.espresso.BasicSample;
+package com.example.android.testing.espresso.BasicSample.other;
 
 import android.app.Activity;
 
@@ -27,6 +27,9 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
+
+import com.example.android.testing.espresso.BasicSample.MainActivity;
+import com.example.android.testing.espresso.BasicSample.R;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
@@ -59,7 +62,7 @@ public class ChangeTextBehaviorTest {
     @Test
     public void changeText_sameActivity() {
         // Type text and then press the button.
-        onView(withId(R.id.editTextUserInput))
+        onView(ViewMatchers.withId(R.id.editTextUserInput))
                 .perform(typeText(STRING_TO_BE_TYPED), closeSoftKeyboard());
         onView(withId(R.id.changeTextBt)).perform(click());
 
