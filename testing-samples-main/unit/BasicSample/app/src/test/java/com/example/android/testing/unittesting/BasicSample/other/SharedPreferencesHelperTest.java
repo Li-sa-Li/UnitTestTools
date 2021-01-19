@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.testing.unittesting.BasicSample;
+package com.example.android.testing.unittesting.BasicSample.other;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.*;
@@ -26,6 +26,9 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import android.content.SharedPreferences;
+
+import com.example.android.testing.unittesting.BasicSample.SharedPreferenceEntry;
+import com.example.android.testing.unittesting.BasicSample.SharedPreferencesHelper;
 
 import java.util.Calendar;
 

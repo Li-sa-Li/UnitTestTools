@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package com.example.android.testing.unittesting.BasicSample;
+package com.example.android.testing.unittesting.BasicSample.other;
+
+import com.example.android.testing.unittesting.BasicSample.EmailValidator;
 
 import org.junit.Test;
 
