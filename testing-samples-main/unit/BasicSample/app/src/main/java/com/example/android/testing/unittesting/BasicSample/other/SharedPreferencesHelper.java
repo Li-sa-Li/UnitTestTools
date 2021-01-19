@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.testing.unittesting.BasicSample;
+package com.example.android.testing.unittesting.BasicSample.other;
 
 import android.content.SharedPreferences;
 

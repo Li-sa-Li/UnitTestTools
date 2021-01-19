@@ -27,9 +27,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import android.content.SharedPreferences;
 
-import com.example.android.testing.unittesting.BasicSample.SharedPreferenceEntry;
-import com.example.android.testing.unittesting.BasicSample.SharedPreferencesHelper;
-
 import java.util.Calendar;
 
 

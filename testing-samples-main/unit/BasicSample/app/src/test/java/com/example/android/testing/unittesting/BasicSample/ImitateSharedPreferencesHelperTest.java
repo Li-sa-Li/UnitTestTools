@@ -2,7 +2,10 @@ package com.example.android.testing.unittesting.BasicSample;
 
 import android.content.SharedPreferences;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -42,8 +45,14 @@ public class ImitateSharedPreferencesHelperTest {
     @Mock
     SharedPreferences.Editor mMockEditor;
 
+    @BeforeClass
+    public static void beforeClass() {
+        System.out.println("beforeClass");
+    }
+
     @Before
     public void initMock() {
+        System.out.println("before");
         sharedPreferenceEntry = new ImitateSharedPreferenceEntry(USER_NAME, DATE_OF_BIRTH, USER_EMAIL);
         mMockSharedPreferenceHelper = createMockSharedPreference();
         mBrokenMockSharedPreferenceHelper = createBrokenMockSharedPreference();
@@ -67,7 +76,6 @@ public class ImitateSharedPreferencesHelperTest {
     }
 
     private ImitateSharedPreferencesHelper createBrokenMockSharedPreference() {
-
         when(mMockEditor.commit()).thenReturn(false);
         when(mBrokenMockSharedPreference.edit()).thenReturn(mMockEditor);
         return new ImitateSharedPreferencesHelper(mBrokenMockSharedPreference);
@@ -75,7 +83,7 @@ public class ImitateSharedPreferencesHelperTest {
 
     @Test
     public void sharedPreference_saveAndReadPersonalInformation() {
-
+        System.out.println("sharedPreference_saveAndReadPersonalInformation");
         final boolean success = mMockSharedPreferenceHelper.imitateSavePersonalInfo(sharedPreferenceEntry);
         assertThat("checking that sharedPreference..save return true", success, is(true));
 
@@ -91,8 +99,19 @@ public class ImitateSharedPreferencesHelperTest {
 
     @Test
     public void sharedPreference_saveAndReadPersonalInformationFail_returnFalse() {
+        System.out.println("sharedPreference_saveAndReadPersonalInformationFail_returnFalse");
         final boolean success = mBrokenMockSharedPreferenceHelper.imitateSavePersonalInfo(sharedPreferenceEntry);
         assertThat("Make sure writing to a broken sharedPerferenceHelper return false "
                 , success, is(false));
+    }
+
+    @After
+    public void after() {
+        System.out.println("after");
+    }
+
+    @AfterClass
+    public static void afterClass() {
+        System.out.println("afterClass");
     }
 }

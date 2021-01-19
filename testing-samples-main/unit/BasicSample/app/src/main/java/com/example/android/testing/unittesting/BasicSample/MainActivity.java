@@ -26,6 +26,10 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.android.testing.unittesting.BasicSample.other.EmailValidator;
+import com.example.android.testing.unittesting.BasicSample.other.SharedPreferenceEntry;
+import com.example.android.testing.unittesting.BasicSample.other.SharedPreferencesHelper;
+
 import java.util.Calendar;
 
 /**

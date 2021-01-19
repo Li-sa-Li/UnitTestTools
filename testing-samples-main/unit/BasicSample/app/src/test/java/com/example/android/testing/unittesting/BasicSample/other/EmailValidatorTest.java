@@ -16,8 +16,6 @@
 
 package com.example.android.testing.unittesting.BasicSample.other;
 
-import com.example.android.testing.unittesting.BasicSample.EmailValidator;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
