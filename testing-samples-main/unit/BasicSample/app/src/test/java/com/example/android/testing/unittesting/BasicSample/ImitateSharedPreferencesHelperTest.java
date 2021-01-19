@@ -29,7 +29,7 @@ public class ImitateSharedPreferencesHelperTest {
     public static final Calendar DATE_OF_BIRTH = Calendar.getInstance();
 
     static {
-        DATE_OF_BIRTH.set(1990, 2, 13);
+        DATE_OF_BIRTH.set(1991, 2, 13);
     }
 
     private ImitateSharedPreferenceEntry sharedPreferenceEntry;
