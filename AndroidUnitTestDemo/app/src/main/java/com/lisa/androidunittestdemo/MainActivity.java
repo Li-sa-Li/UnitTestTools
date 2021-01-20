@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                Intent intent = new Intent(this, LoginActivity.class);
 //                startActivity(intent);
 //                Toast.makeText(this, "测试", Toast.LENGTH_SHORT).show();
-                showDialog();
+//                showDialog();
+                Intent intent = new Intent(this,MyService.class);
+                startService(intent);
                 break;
             default:
                 break;
